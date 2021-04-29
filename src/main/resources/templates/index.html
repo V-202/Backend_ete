@@ -8,12 +8,15 @@
 </head>
 <body>
 <div id="navbar">
-    <a class="btn" href="https://backend-ete.herokuapp.com/" >Profile</a>
-    <a class="btn" href="https://backend-ete.herokuapp.com/">User Info</a>
-</div></br>
+<!--    <a class="btn" href="https://userdetailsbybal.herokuapp.com/" >Profile</a>-->
+<!--    <a class="btn" href="https://userdetailsbybal.herokuapp.com/userinfo">User Info</a>-->
+        <a class="btn" href="/" >Profile</a>
+        <a class="btn" href="/userinfo">User Info</a>
+</div>
 
 <div id="entry">
-    <form id="my_form" action="https://backend-ete.herokuapp.com/" method="get">
+<!--    <form id="my_form" action="https://userdetailsbybal.herokuapp.com/userinfo" onsubmit="adddata()" method="get">-->
+            <form id="my_form" action="/userinfo" onsubmit="adddata()" method="get">
         Name
         <input type="text" id="name">
         Age
@@ -25,7 +28,7 @@
         Phone Number
         <input type="number" id="ph_no">
 
-        <button onclick="adddata()">Submit</button>
+        <input type="submit" placeholder="submit">
 
     </form>
 </div>

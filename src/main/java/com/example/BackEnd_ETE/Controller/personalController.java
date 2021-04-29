@@ -49,6 +49,6 @@ public class personalController {
         System.out.println(data);
         User user = new ObjectMapper().readValue(data, User.class);
         System.out.println(user.toString());
-        userservice.adduser(user);
+        userservice.update(user);
     }
 }
