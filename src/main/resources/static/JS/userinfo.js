@@ -1,32 +1,3 @@
-function fun()
-{
-
-
-
-
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "https://fetchdatabyvansh.herokuapp.com/getallusers", true);
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-
-            // document.getElementById("result").innerHTML=this.responseText;
-            var list=JSON.parse(this.responseText);
-            for(var i=0;i<list.length;i++)
-            {
-
-                users(list[i]);
-            }
-
-        }
-    };
-
-
-    xhttp.send();
-
-
-}
-
 function users(data)
 {
     let name=data.Name;
@@ -173,4 +144,23 @@ function updatedata()
     xhttp.send(JSON.stringify(data));
 
 
+}
+
+function fun()
+{
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "https://fetchdatabyvansh.herokuapp.com/getallusers", true);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+
+            // document.getElementById("result").innerHTML=this.responseText;
+            var list=JSON.parse(this.responseText);
+            for(var i=0;i<list.length;i++)
+            {
+                users(list[i]);
+            }
+
+        }
+    };
+    xhttp.send();
 }
