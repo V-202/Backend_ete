@@ -15,14 +15,14 @@ function adddata()
             alert(this.responseText)
             if(this.responseText==="false")
             {
-                 alert("UserInvalid");
-                 window.location="http://localhost:8080/"
+                alert("UserInvalid");
+                window.location="http://localhost:8080/"
                 return
             }
             else{
                 alert("hogya");
 
-                 parent.setAttribute("action","http://localhost:8080/userinfo");
+                parent.setAttribute("action","http://localhost:8080/userinfo");
                 window.location="http://localhost:8080/userinfo";
 
                 //console.log(localStorage.getItem("user_name"));
@@ -33,10 +33,10 @@ function adddata()
     };
     var data={
         "Name":name,
-            "Age":age,
-            "Email":email,
-            "Address":address,
-            "Phone_number":ph_no
+        "Age":age,
+        "Email":email,
+        "Address":address,
+        "Phone_number":ph_no
     };
 
     xhttp.send(JSON.stringify(data));

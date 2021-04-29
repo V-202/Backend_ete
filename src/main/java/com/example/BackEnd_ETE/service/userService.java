@@ -34,4 +34,16 @@ public class userService {
     {
         return (List<User>) this.userRepository.findAll();
     }
+
+    public void deleteuser(String email)
+    {
+        this.userRepository.deleteById(email);
+    }
+
+    public void update(User user)
+    {
+        this.userRepository.save(user);
+
+
+    }
 }
